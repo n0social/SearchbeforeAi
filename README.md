@@ -1,6 +1,6 @@
 # The Time Before AI
 
-**The Time Before AI** is a free [Manifest V3](https://developer.chrome.com/docs/extensions/develop/migrate) Chrome extension that restores a classic Google Search experience: **blue links and web results first**, without AI summaries and AI Mode chrome in your face.
+**The Time Before AI** is a free (https://developer.chrome.com/docs/extensions/develop/migrate) Chrome extension that restores a classic Google Search experience: **blue links and web results first**, without AI summaries and AI Mode chrome in your face.
 
 Use it when you want to remember what searching felt like before AI Overviews, the AI Mode tab, and the Gemini sidebar became part of every results page.
 
