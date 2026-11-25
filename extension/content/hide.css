@@ -1,0 +1,18 @@
+/**
+ * Optimistic hides before JS runs (enabled by default via html.search-before-ai).
+ * Visibility keeps layout stable; content script sets display:none on confirmed blocks.
+ */
+html.search-before-ai [data-async-type="folsrch"],
+html.search-before-ai [id^="folsrch"] {
+  visibility: hidden !important;
+}
+
+html.search-before-ai a[href*="udm=50"] {
+  visibility: hidden !important;
+}
+
+/* AI Mode / Gemini left rail (gold G); class names change often */
+html.search-before-ai .gwi4t,
+html.search-before-ai [class*="gwi4t"] {
+  visibility: hidden !important;
+}
