@@ -16,6 +16,12 @@ Extension toolbar icons (`16`, `48`, `128`) live in [`extension/icons/`](../exte
 
 **Caveman + magnifying glass** — “search from the time before AI.” We intentionally do **not** use Google’s logo or colors (trademark).
 
+Pixel art is generated from the master illustration: **40×40** logical pixels, fixed retro palette, dark outlines, nearest-neighbor upscale. Regenerate:
+
+```bash
+python3 store-assets/scripts/to-pixel-art.py --grid 40
+```
+
 ---
 
 ## Dashboard fields (copy/paste)
