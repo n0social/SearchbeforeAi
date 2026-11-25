@@ -1,6 +1,8 @@
-# Search Before AI
+# Remove AI From Search Engine
 
-Chrome extension (MVP) that restores a classic Google Search experience by hiding **AI Overviews** and the **AI Mode** tab. More search engines and “retro” styling are planned after we validate this on Google.
+Chrome extension (MVP) that strips AI surfaces from Google Search—**AI Overviews**, the **AI Mode** tab, and the **Gemini left rail**—so you get classic web links. More search engines and “retro” styling are planned after we validate this on Google.
+
+> GitHub repo name [SearchbeforeAi](https://github.com/n0social/SearchbeforeAi) is unchanged; the extension display name is **Remove AI From Search Engine**.
 
 ## Install (unpacked)
 

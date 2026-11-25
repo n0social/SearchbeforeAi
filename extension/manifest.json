@@ -1,11 +1,11 @@
 {
   "manifest_version": 3,
-  "name": "Search Before AI",
-  "version": "0.1.1",
-  "description": "Bring back classic Google web results by hiding AI Overviews and AI Mode.",
+  "name": "Remove AI From Search Engine",
+  "version": "0.1.2",
+  "description": "Hide AI Overviews, AI Mode, and Gemini on Google Search—classic web results only.",
   "permissions": ["storage"],
   "action": {
-    "default_title": "Search Before AI",
+    "default_title": "Remove AI From Search Engine",
     "default_popup": "popup/popup.html"
   },
   "icons": {
