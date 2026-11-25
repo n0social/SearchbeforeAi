@@ -26,11 +26,11 @@ Download the packaged extension, extract it, then load the **folder** in Chrome 
 
 | Version | File |
 | -------- | ---- |
-| **0.1.3** | [**the-time-before-ai-v0.1.3.zip**](dist/the-time-before-ai-v0.1.3.zip) |
+| **0.1.4** | [**the-time-before-ai-v0.1.4.zip**](dist/the-time-before-ai-v0.1.4.zip) |
 
 Direct link (main branch):
 
-https://github.com/n0social/TheTimeBeforeAi/raw/main/dist/the-time-before-ai-v0.1.3.zip
+https://github.com/n0social/TheTimeBeforeAi/raw/main/dist/the-time-before-ai-v0.1.4.zip
 
 > Chrome does not install from a `.zip` directly. Unzip first, then **Load unpacked** and select the extracted folder (it must contain `manifest.json` at the top level).
 
@@ -46,7 +46,7 @@ Output: `dist/the-time-before-ai-v<version>.zip` (version from `extension/manife
 
 ### From the downloaded ZIP
 
-1. Download [**the-time-before-ai-v0.1.3.zip**](dist/the-time-before-ai-v0.1.3.zip) and extract it to a folder on your computer.
+1. Download [**the-time-before-ai-v0.1.4.zip**](dist/the-time-before-ai-v0.1.4.zip) and extract it to a folder on your computer.
 2. Open Chrome → `chrome://extensions`.
 3. Turn on **Developer mode** (top right).
 4. Click **Load unpacked** and choose the **extracted** folder (not the `.zip` file).
@@ -101,6 +101,7 @@ extension/
 scripts/
   package-extension.sh
 dist/               # Released .zip builds
+store-assets/       # Chrome Web Store icon + listing copy
 ```
 
 Validation checklist for manual QA:
