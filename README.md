@@ -1,8 +1,6 @@
-# Remove AI From Search Engine
+# The Time Before AI
 
-Chrome extension (MVP) that strips AI surfaces from Google Search—**AI Overviews**, the **AI Mode** tab, and the **Gemini left rail**—so you get classic web links. More search engines and “retro” styling are planned after we validate this on Google.
-
-> GitHub repo name [SearchbeforeAi](https://github.com/n0social/SearchbeforeAi) is unchanged; the extension display name is **Remove AI From Search Engine**.
+Chrome extension that strips AI from Google Search—**AI Overviews**, the **AI Mode** tab, and the **Gemini left rail**—so you get classic web links. More search engines and retro styling are planned after we validate Google.
 
 ## Install (unpacked)
 
@@ -30,6 +28,7 @@ extension/
   content/
     hide.css            # Early hide rules (reduces flicker)
     labels.js           # Localized AI Overview heading patterns
+    gemini-rail.js      # Left Gemini / AI Mode sidebar
     content.js          # MutationObserver + safe container detection
   popup/                # Toolbar popup UI
   icons/
@@ -42,7 +41,8 @@ Use queries that often trigger AI Overviews (e.g. factual “what is …” ques
 
 - [ ] No AI Overview panel above results (when Google would normally show one)
 - [ ] AI Mode tab is absent from the result-type tabs
-- [ ] Organic results (`#rso`) still visible — if results disappear, file an issue with the query
+- [ ] Gemini left rail is hidden (if your account has the experiment)
+- [ ] Organic results (`#rso`) still visible
 - [ ] Toggling **Enabled** off in the popup restores Google’s default UI after reload
 
 ## Limitations (MVP)
@@ -54,3 +54,7 @@ Use queries that often trigger AI Overviews (e.g. factual “what is …” ques
 ## Privacy
 
 See [extension/PRIVACY.md](extension/PRIVACY.md).
+
+## Repo
+
+https://github.com/n0social/TheTimeBeforeAi
