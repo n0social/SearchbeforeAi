@@ -45,6 +45,56 @@
     return true;
   }
 
+  function climbLeftDock(start) {
+    let root = start;
+    for (let i = 0; i < 10; i++) {
+      const parent = root.parentElement;
+      if (!parent || parent === document.documentElement) break;
+      if (containsResults(parent)) break;
+      const rect = parent.getBoundingClientRect();
+      if (rect.width > 240 || rect.left > 96) break;
+      root = parent;
+    }
+    return root;
+  }
+
+  /** Signed-out / new layouts: narrow full-height column with icon buttons on the far left. */
+  function findLeftRailsByGeometry() {
+    const roots = new Set();
+    const viewportH = window.innerHeight || 800;
+
+    for (const el of document.querySelectorAll(
+      "a, button, [role='button'], [data-ved]",
+    )) {
+      if (el.closest("#rso, #center_col, #searchform, [role='navigation']")) {
+        continue;
+      }
+      const rect = el.getBoundingClientRect();
+      if (rect.width === 0 && rect.height === 0) continue;
+      if (rect.left > 88) continue;
+      if (rect.top > 200) continue;
+
+      const root = climbLeftDock(el);
+      const r = root.getBoundingClientRect();
+      if (r.width < 28 || r.width > 220) continue;
+      if (r.left > 80) continue;
+      if (r.height < viewportH * 0.3) continue;
+      if (!isSafeRailRoot(root)) continue;
+
+      const controls = root.querySelectorAll(
+        "a, button, [role='button']",
+      ).length;
+      if (controls < 1) continue;
+      roots.add(root);
+    }
+
+    // Drop nested duplicates — keep outermost rail container.
+    const list = [...roots];
+    return list.filter(
+      (el) => !list.some((other) => other !== el && other.contains(el)),
+    );
+  }
+
   function collectGeminiRails() {
     const roots = new Set();
 
@@ -62,8 +112,15 @@
     });
 
     document.querySelectorAll("[aria-label]").forEach((el) => {
-      if (!ARIA_GEMINI.test(el.getAttribute("aria-label") || "")) return;
-      if (el.closest("#rso, #center_col")) return;
+      const label = el.getAttribute("aria-label") || "";
+      if (
+        !ARIA_GEMINI.test(label) &&
+        !/^google apps$|^main menu$|^settings$/i.test(label)
+      ) {
+        return;
+      }
+      if (el.closest("#rso, #center_col, [role='navigation']")) return;
+      if (el.getBoundingClientRect().left > 100) return;
       consider(el);
     });
 
@@ -74,7 +131,12 @@
         consider(el);
       });
 
-    return [...roots];
+    findLeftRailsByGeometry().forEach((el) => roots.add(el));
+
+    const list = [...roots];
+    return list.filter(
+      (el) => !list.some((other) => other !== el && other.contains(el)),
+    );
   }
 
   globalThis.SEARCH_BEFORE_AI_collectGeminiRails = collectGeminiRails;

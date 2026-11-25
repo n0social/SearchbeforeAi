@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "The Time Before AI",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Hide AI Overviews, AI Mode, and Gemini on Google Search—classic web results only.",
   "permissions": ["storage"],
   "action": {

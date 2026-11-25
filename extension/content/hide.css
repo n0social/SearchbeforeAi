@@ -16,3 +16,11 @@ html.search-before-ai .gwi4t,
 html.search-before-ai [class*="gwi4t"] {
   visibility: hidden !important;
 }
+
+/* Reclaim horizontal space when Google reserves a left AI dock (best-effort). */
+html.search-before-ai.search-before-ai-rail-hidden #center_col,
+html.search-before-ai.search-before-ai-rail-hidden #appbar,
+html.search-before-ai.search-before-ai-rail-hidden #searchform {
+  margin-left: 0 !important;
+  padding-left: max(12px, env(safe-area-inset-left)) !important;
+}

@@ -137,7 +137,14 @@
     }
 
     if (settings.hideGeminiRail) {
-      collectGeminiRails().forEach(storeHiddenDisplay);
+      const rails = collectGeminiRails();
+      rails.forEach(storeHiddenDisplay);
+      document.documentElement.classList.toggle(
+        "search-before-ai-rail-hidden",
+        rails.length > 0,
+      );
+    } else {
+      document.documentElement.classList.remove("search-before-ai-rail-hidden");
     }
   }
 
