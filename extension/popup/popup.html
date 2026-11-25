@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Search Before AI</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Search Before AI</h1>
+      <p class="tagline">Classic Google web results</p>
+    </header>
+    <form id="settings">
+      <label class="row main">
+        <span>Enabled on Google Search</span>
+        <input type="checkbox" name="enabled" checked />
+      </label>
+      <label class="row">
+        <span>Hide AI Overview</span>
+        <input type="checkbox" name="hideAiOverview" checked />
+      </label>
+      <label class="row">
+        <span>Hide AI Mode tab</span>
+        <input type="checkbox" name="hideAiModeTab" checked />
+      </label>
+    </form>
+    <p class="hint">Reload open Google result tabs after changing settings.</p>
+    <script src="popup.js"></script>
+  </body>
+</html>
