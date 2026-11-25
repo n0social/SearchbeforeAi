@@ -16,6 +16,7 @@ Click the extension icon to toggle:
 - **Enabled on Google Search** — master switch
 - **Hide AI Overview** — removes the generative summary block
 - **Hide AI Mode tab** — hides the `udm=50` AI Mode vertical tab
+- **Hide Gemini left sidebar** — removes the left AI Mode / Gemini rail (gold G icon)
 
 Reload open Google result tabs after changing settings.
 

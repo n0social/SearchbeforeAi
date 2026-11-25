@@ -10,3 +10,9 @@ html.search-before-ai [id^="folsrch"] {
 html.search-before-ai a[href*="udm=50"] {
   visibility: hidden !important;
 }
+
+/* AI Mode / Gemini left rail (gold G); class names change often */
+html.search-before-ai .gwi4t,
+html.search-before-ai [class*="gwi4t"] {
+  visibility: hidden !important;
+}

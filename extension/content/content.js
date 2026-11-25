@@ -8,7 +8,11 @@
     enabled: true,
     hideAiOverview: true,
     hideAiModeTab: true,
+    hideGeminiRail: true,
   };
+
+  const collectGeminiRails =
+    globalThis.SEARCH_BEFORE_AI_collectGeminiRails ?? (() => []);
 
   /** @type {typeof DEFAULTS} */
   let settings = { ...DEFAULTS };
@@ -130,6 +134,10 @@
 
     if (settings.hideAiModeTab) {
       findAiModeTabs().forEach(storeHiddenDisplay);
+    }
+
+    if (settings.hideGeminiRail) {
+      collectGeminiRails().forEach(storeHiddenDisplay);
     }
   }
 

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Search Before AI",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Bring back classic Google web results by hiding AI Overviews and AI Mode.",
   "permissions": ["storage"],
   "action": {
@@ -35,7 +35,7 @@
         "*://www.google.com.sg/search*"
       ],
       "css": ["content/hide.css"],
-      "js": ["content/labels.js", "content/content.js"],
+      "js": ["content/labels.js", "content/gemini-rail.js", "content/content.js"],
       "run_at": "document_start"
     }
   ]

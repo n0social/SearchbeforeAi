@@ -2,6 +2,7 @@ const DEFAULTS = {
   enabled: true,
   hideAiOverview: true,
   hideAiModeTab: true,
+  hideGeminiRail: true,
 };
 
 const form = document.getElementById("settings");
