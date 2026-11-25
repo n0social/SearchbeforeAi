@@ -1,7 +1,6 @@
 # Privacy
 
-The Time Before AI does not collect, transmit, or sell any personal data.
+**Full policy (Chrome Web Store & GitHub):**  
+https://github.com/n0social/TheTimeBeforeAi/blob/main/PRIVACY.md
 
-- The extension runs only on Google Search result pages matched in `manifest.json`.
-- Settings are stored locally in your browser via `chrome.storage.sync` (Chrome sync, if enabled).
-- No analytics, telemetry, or remote code.
+The Time Before AI does not collect, transmit, or sell personal data. It runs only on Google Search URLs defined in `manifest.json`, uses `storage` for toggle settings, and includes no analytics or remote code.

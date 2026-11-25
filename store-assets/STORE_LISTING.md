@@ -106,13 +106,13 @@ The extension reads and modifies the DOM only on Google Search result pages to h
 - **No** collection of personally identifiable information  
 - **No** use of data for unrelated purposes  
 
-**Privacy policy URL** (host the policy at a stable public URL):
+**Privacy policy URL** (GitHub — use in the dashboard):
 
 ```text
-https://github.com/n0social/TheTimeBeforeAi/blob/main/extension/PRIVACY.md
+https://github.com/n0social/TheTimeBeforeAi/blob/main/PRIVACY.md
 ```
 
-If the dashboard requires a dedicated page, add `docs/privacy.html` on GitHub Pages or link the raw README privacy section.
+Host / site access justification: [docs/HOST_PERMISSIONS.md](../docs/HOST_PERMISSIONS.md)
 
 ### Support / contact
 

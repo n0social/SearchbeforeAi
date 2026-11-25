@@ -6,7 +6,7 @@ Use it when you want to remember what searching felt like before AI Overviews, t
 
 - **Search engine support (MVP):** Google Search (`google.com` and common regional domains)
 - **Permissions:** `storage` only (saved toggles); runs only on Google `/search` pages
-- **Privacy:** No analytics, no network calls — see [extension/PRIVACY.md](extension/PRIVACY.md)
+- **Privacy:** No analytics, no network calls — see [PRIVACY.md](PRIVACY.md)
 
 ## What it removes on Google
 
